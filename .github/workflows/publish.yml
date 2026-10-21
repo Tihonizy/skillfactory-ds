@@ -1,11 +1,11 @@
-name: Publish HTML to GitHub Pages
+name: Publish charts to GitHub Pages
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
     paths:
-      - "public/**"
-      - "project_6/public/**"
+      - "index.html"
+      - "06-yandex-maps-review-sentiment/public/**"
   workflow_dispatch:
 
 jobs:
@@ -15,19 +15,14 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+
+      # The site keeps the original /project_6/ URLs so that links shared earlier still work.
       - name: Prepare deploy folder
         run: |
-          mkdir -p ./deploy
-          if [ -d "./public" ]; then
-            cp -r ./public/. ./deploy/
-          fi
-          for f in *.html; do
-            [ -f "$f" ] && cp "$f" ./deploy/
-          done
-          if [ -d "./project_6/public" ]; then
-            mkdir -p ./deploy/project_6
-            cp -r ./project_6/public/. ./deploy/project_6/
-          fi
+          mkdir -p deploy/project_6
+          cp index.html deploy/
+          cp -r 06-yandex-maps-review-sentiment/public/. deploy/project_6/
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:

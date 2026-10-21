@@ -1,16 +1,35 @@
-# My data science projects
-From the [Skillfactory Data Science course](https://skillfactory.ru/data-scientist-pro)
+# Skillfactory Data Science Projects
 
-## Проекты
+Projects completed during the [Skillfactory Data Science course](https://skillfactory.ru/data-scientist-pro):
+data visualization, data cleaning, SQL, statistical testing, clustering and NLP with a deployed model.
+Each project has its own folder with a notebook, a short English README and a detailed description in Russian.
 
-[Проект 1. Визуализация данных](https://github.com/sibainu2010/skillfactory_ds/blob/main/PYTHON-13.%D0%98%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%BE%20%D0%B2%D0%B8%D0%B7%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8.ipynb)
+[Русская версия](README.ru.md)
 
-[Проект 2. Анализ резюме из HeadHunter](https://github.com/sibainu2010/skillfactory_ds/blob/main/PROJECT-1.%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7%20%D1%80%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5%20%D0%B8%D0%B7%20HeadHunter.ipynb)
+## Projects
 
-[Проект 3. Анализ вакансий из HeadHunter](https://github.com/sibainu2010/skillfactory_ds/blob/main/project_3/PROJECT-2.%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7%20%D0%B2%D0%B0%D0%BA%D0%B0%D0%BD%D1%81%D0%B8%D0%B9%20%D0%B8%D0%B7%20HeadHunter.ipynb)
+| # | Project | Topic | Tools |
+|---|---|---|---|
+| 1 | [Bank customer churn visualization](01-bank-churn-visualization) | Data visualization | pandas, Plotly |
+| 2 | [HeadHunter resume analysis](02-hh-resume-analysis) | Data cleaning and EDA | pandas, Matplotlib, Seaborn, Plotly |
+| 3 | [HeadHunter vacancy analysis](03-hh-vacancy-analysis) | SQL analytics | PostgreSQL, psycopg2, pandas |
+| 4 | [Data science salary research](04-ds-salary-research) | Hypothesis testing | SciPy, statsmodels |
+| 5 | [Online store customer segmentation](05-customer-segmentation) | RFM clustering | scikit-learn, Plotly |
+| 6 | [Yandex Maps review sentiment](06-yandex-maps-review-sentiment) | NLP classification and deployment | scikit-learn, pymorphy3, FastAPI |
 
-[Проект 4. Исследование данных HR-агентства](https://github.com/sibainu2010/skillfactory_ds/blob/main/project_4/%D0%98%D0%A1%D0%A1%D0%9B%D0%95%D0%94%D0%9E%D0%92%D0%90%D0%9D%D0%98%D0%95%20%D0%94%D0%90%D0%9D%D0%9D%D0%AB%D0%A5%20HR-%D0%90%D0%93%D0%95%D0%9D%D0%A2%D0%A1%D0%A2%D0%92%D0%90.ipynb)
+Interactive charts for project 6 are published on [GitHub Pages](https://tihonizy.github.io/skillfactory-ds/).
+The model from project 6 is served by [sentiment-api](https://github.com/Tihonizy/sentiment-api).
 
-[Проект 5. Сегментация клиентов онлайн-магазина](https://github.com/sibainu2010/skillfactory_ds/blob/main/project_5/PROJECT-5._%D0%A1%D0%B5%D0%B3%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F_%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D0%BE%D0%B2_%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D0%B0.ipynb)
+## Running the notebooks
 
-[Проект 6. Анализ тональности отзывов клиентов (Яндекс Карты)](https://github.com/sibainu2010/skillfactory_ds/blob/main/project_6/project_6.ipynb)
+Each project lists its dependencies in `requirements.txt`:
+
+```bash
+pip install -r 05-customer-segmentation/requirements.txt
+```
+
+Datasets are not stored in the repository. Notebooks read them from a `data/` folder next to the notebook.
+
+## License
+
+[MIT](LICENSE)
