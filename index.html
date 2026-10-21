@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 6 - Анализ отзывов</title>
+    <title>Анализ отзывов с Яндекс Карт</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -34,56 +34,49 @@
         .card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
         .card h3 { font-size: 1.5em; margin-bottom: 15px; color: #667eea; }
         .card p { color: #666; line-height: 1.6; }
-        .card .icon { font-size: 2em; margin-bottom: 15px; display: inline-block; }
-        .footer { text-align: center; color: rgba(255,255,255,0.7); margin-top: 50px; font-size: 0.9em; }
+                .footer { text-align: center; color: rgba(255,255,255,0.7); margin-top: 50px; font-size: 0.9em; }
         @media (max-width: 768px) { h1 { font-size: 1.8em; } .grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>📊 Анализ отзывов</h1>
-        <div class="subtitle">Интерактивные визуализации — Project 6</div>
+        <h1>Анализ отзывов с Яндекс Карт</h1>
+        <div class="subtitle">Интерактивные графики к проекту 6</div>
 
         <div class="grid">
             <a href="project_6/rubrics.html" class="card">
-                <div class="icon">📊</div>
                 <h3>Топ-20 рубрик</h3>
                 <p>Количество отзывов по категориям бизнеса</p>
             </a>
 
             <a href="project_6/cities.html" class="card">
-                <div class="icon">🏙</div>
                 <h3>Топ-15 городов</h3>
                 <p>Распределение отзывов по городам России</p>
             </a>
 
             <a href="project_6/rating_by_rubric.html" class="card">
-                <div class="icon">⭐</div>
                 <h3>Рейтинг по рубрикам</h3>
                 <p>Средний рейтинг (позитив/негатив) по категориям</p>
             </a>
 
             <a href="project_6/text_length.html" class="card">
-                <div class="icon">📝</div>
                 <h3>Длина отзывов</h3>
                 <p>Распределение длины и связь с тональностью</p>
             </a>
 
             <a href="project_6/map.html" class="card">
-                <div class="icon">🗺</div>
                 <h3>Карта негатива</h3>
                 <p>Доля отрицательных отзывов по городам России</p>
             </a>
 
             <a href="project_6/threshold.html" class="card">
-                <div class="icon">📈</div>
                 <h3>Подбор порога F1</h3>
                 <p>Оптимальный порог классификации для негативного класса</p>
             </a>
         </div>
 
         <div class="footer">
-            <p>Project 6 — Анализ тональности отзывов | SkillFactory Data Science Course</p>
+            <p>Проект 6: анализ тональности отзывов. <a href="https://github.com/Tihonizy/skillfactory-ds" style="color:inherit">Исходный код на GitHub</a></p>
             <p>Интерактивные графики созданы с помощью Plotly</p>
         </div>
     </div>
