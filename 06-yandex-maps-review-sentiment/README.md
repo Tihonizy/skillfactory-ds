@@ -5,7 +5,8 @@ on Hugging Face), from raw text to a deployed API.
 
 - EDA on ratings, business categories and cities, with interactive charts published on
   [GitHub Pages](https://tihonizy.github.io/skillfactory-ds/).
-- Text preprocessing: Cyrillic-only cleaning, stop words, lemmatization with pymorphy3.
+- Text preprocessing: Cyrillic-only cleaning, stop words, lemmatization with pymorphy3. Negations are kept and glued
+  to the next word, so "не понравилось" becomes the token `не_понравиться` instead of "понравилось".
 - TF-IDF with 1-3 word n-grams and 50,000 features. Six models compared: logistic regression,
   LinearSVC, decision tree, random forest, XGBoost and CatBoost.
 - Final model: LinearSVC with a decision threshold tuned on a separate validation split.
